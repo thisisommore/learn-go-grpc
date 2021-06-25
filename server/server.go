@@ -15,7 +15,7 @@ type myServer struct {
 
 func (s *myServer) SayName(ctx context.Context, req *service.Request) (*service.Response,error) {
 	fmt.Printf("In sayName: req name is %v",req.Name)
-	return &service.Response{GotName:"Ok I am admin GOOM and I got name"+req.Name},nil
+	return &service.Response{GotName:"Ok I am admin GOOM and I got name "+req.Name},nil
 }
 func main()  {
 	fmt.Println("Hii")
