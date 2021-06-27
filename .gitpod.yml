@@ -1,1 +1,2 @@
-image: thisisommore/my-golang
+image:
+  file: ./Dockerfile
