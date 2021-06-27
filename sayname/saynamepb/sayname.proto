@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 package sayname;
-option go_package = "/saynamepb";
+option go_package = "sayname/saynamepb";
 
 service SayNameService {
     rpc sayName (SayNameRequest) returns (SayNameResponse);

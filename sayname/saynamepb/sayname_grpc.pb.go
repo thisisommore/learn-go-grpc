@@ -97,5 +97,5 @@ var SayNameService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "saynamepb/sayname.proto",
+	Metadata: "sayname/saynamepb/sayname.proto",
 }
