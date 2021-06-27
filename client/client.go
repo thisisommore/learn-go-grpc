@@ -1,24 +1,25 @@
 package main
 
 import (
+	"context"
 	"log"
-	"context"	
+	"mygrpc/saynamepb"
+
 	"google.golang.org/grpc"
-	"mygrpc/service"
 )
 
-func main()  {
+func main() {
 	var conn *grpc.ClientConn
-	conn,err := grpc.Dial(":5000",grpc.WithInsecure())
+	conn, err := grpc.Dial(":5000", grpc.WithInsecure())
 	if err != nil {
-		log.Fatalf("Error: %v",err)
+		log.Fatalf("Error: %v", err)
 	}
 
 	defer conn.Close()
 
-	c := service.NewMyServClient(conn)
+	c := saynamepb.NewSayNameServiceClient(conn)
 
-	res,err := c.SayName(context.Background(),&service.Request{Name:"Om"})
+	res, err := c.SayName(context.Background(), &saynamepb.SayNameRequest{Name: "Om"})
 	if err != nil {
 		log.Fatalf("Error when calling SayHello: %s", err)
 	}

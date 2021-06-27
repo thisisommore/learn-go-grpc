@@ -1,0 +1,1 @@
+protoc saynamepb/sayname.proto --go_out=. --go-grpc_out=.

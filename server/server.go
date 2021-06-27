@@ -1,32 +1,33 @@
-package main;
+package main
 
 import (
 	"fmt"
-	"golang.org/x/net/context"
-	"mygrpc/service"
-	"net"
 	"log"
+	"mygrpc/saynamepb"
+	"net"
+
+	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 )
 
-type myServer struct {
-	service.UnimplementedMyServServer
+type server struct {
+	saynamepb.UnimplementedSayNameServiceServer
 }
 
-func (s *myServer) SayName(ctx context.Context, req *service.Request) (*service.Response,error) {
-	fmt.Printf("In sayName: req name is %v",req.Name)
-	return &service.Response{GotName:"Ok I am admin GOOM and I got name "+req.Name},nil
+func (s *server) SayName(ctx context.Context, req *saynamepb.SayNameRequest) (*saynamepb.SayNameResponse, error) {
+	fmt.Printf("In sayName: req name is %v", req.Name)
+	return &saynamepb.SayNameResponse{GotName: "Ok I am admin GOOM and I got name " + req.Name}, nil
 }
-func main()  {
+func main() {
 	fmt.Println("Hii")
-	lis,err := net.Listen("tcp",":5000")
-	if err!=nil {
-		log.Fatalf("Failed to listen: %v",err)
+	lis, err := net.Listen("tcp", ":5000")
+	if err != nil {
+		log.Fatalf("Failed to listen: %v", err)
 	}
-	s := myServer{}
+	s := server{}
 	grpcServer := grpc.NewServer()
-	service.RegisterMyServServer(grpcServer,&s)
+	saynamepb.RegisterSayNameServiceServer(grpcServer, &s)
 	if err := grpcServer.Serve(lis); err != nil {
-		log.Fatalf("Failed to serve: %v",err)
+		log.Fatalf("Failed to serve: %v", err)
 	}
 }

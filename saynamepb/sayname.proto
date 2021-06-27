@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package mygrpc;
+option go_package = "/saynamepb";
+
+service SayNameService {
+    rpc sayName (SayNameRequest) returns (SayNameResponse);
+}
+
+message SayNameRequest {
+    string name = 1;
+}
+
+message SayNameResponse {
+    string gotName = 1;
+}
