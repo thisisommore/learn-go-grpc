@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"log"
-	"mygrpc/saynamepb"
+	"sayname/saynamepb"
 
 	"google.golang.org/grpc"
 )

@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 	"log"
-	"mygrpc/sayname/saynamepb"
 	"net"
+	"sayname/saynamepb"
 
 	"context"
 
