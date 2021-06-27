@@ -3,10 +3,11 @@ package main
 import (
 	"fmt"
 	"log"
-	"mygrpc/saynamepb"
+	"mygrpc/sayname/saynamepb"
 	"net"
 
-	"golang.org/x/net/context"
+	"context"
+
 	"google.golang.org/grpc"
 )
 
