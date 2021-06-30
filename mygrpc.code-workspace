@@ -1,0 +1,14 @@
+{
+  "folders": [
+    {
+      "path": "calculator"
+    },
+    {
+      "path": "greet"
+    },
+    {
+      "path": "sayname"
+    }
+  ],
+  "settings": {}
+}
