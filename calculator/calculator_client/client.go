@@ -22,4 +22,16 @@ func MakeRequest() {
 	}
 	log.Printf("Got res: %v", res)
 
+	numbers := []int32{10, 9, 3}
+	stream, err := c.Sum(context.Background())
+	if err != nil {
+		log.Fatalf("Cannot call Sum: %v", err)
+	}
+	for _, number := range numbers {
+		stream.Send(&pb.SumRequest{
+			Num: number,
+		})
+	}
+	sumRes, _ := stream.CloseAndRecv()
+	log.Printf("Sum is: %v", sumRes.Result)
 }
