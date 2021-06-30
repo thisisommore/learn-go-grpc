@@ -1,0 +1,5 @@
+{
+  "image": "thisisommore/my-golang",
+  "extensions": ["golang.go"],
+  "forwardPorts": [3000]
+}
