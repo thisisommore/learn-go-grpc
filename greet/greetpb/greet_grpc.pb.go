@@ -124,5 +124,5 @@ var GreetService_ServiceDesc = grpc.ServiceDesc{
 			ServerStreams: true,
 		},
 	},
-	Metadata: "greetpb/greet.proto",
+	Metadata: "greet/greetpb/greet.proto",
 }
