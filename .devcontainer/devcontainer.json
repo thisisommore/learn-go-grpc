@@ -1,5 +1,8 @@
 {
   "image": "thisisommore/my-golang",
-  "extensions": ["golang.go"],
+  "extensions": [
+	"golang.go",
+	"zxh404.vscode-proto3"
+],
   "forwardPorts": [3000]
 }
