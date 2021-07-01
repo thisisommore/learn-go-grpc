@@ -1,4 +1,4 @@
-module calculator
+module github.com/thisisommore/learn-go-grpc/calculator
 
 go 1.16
 
