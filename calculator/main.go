@@ -1,8 +1,8 @@
 package main
 
 import (
-	client "calculator/calculator_client"
-	server "calculator/calculator_server"
+	client "github.com/thisisommore/calculator/calculator_client"
+	server "github.com/thisisommore/calculator/calculator_server"
 )
 
 func main() {
