@@ -1,4 +1,4 @@
-package client
+package calculator_client
 
 import (
 	pb "calculator/calculatorpb"

@@ -1,4 +1,4 @@
-package server
+package calculator_server
 
 import (
 	pb "calculator/calculatorpb"
