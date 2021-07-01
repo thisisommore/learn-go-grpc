@@ -1,8 +1,8 @@
 package main
 
 import (
-	client "github.com/thisisommore/calculator/calculator_client"
-	server "github.com/thisisommore/calculator/calculator_server"
+	client "github.com/thisisommore/learn-go-grpc/calculator/calculator_client"
+	server "github.com/thisisommore/learn-go-grpc/calculator/calculator_server"
 )
 
 func main() {
