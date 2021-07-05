@@ -1,4 +1,10 @@
 image:
   file: ./Dockerfile
 workspaceLocation: mygrpc.code-workspace
-checkoutLocation: .
+checkoutLocation: go/src/github.com/thisisommore/learn-go-grpc/calculator
+tasks:
+  - command: |
+      cd /workspace/go/src/github.com/thisisommore/learn-go-grpc/calculator
+      go get -v ./...
+      go build -o app
+      ./app
