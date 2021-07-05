@@ -1,9 +1,10 @@
-package client
+package calculator_client
 
 import (
-	pb "calculator/calculatorpb"
 	"context"
 	"log"
+
+	pb "github.com/thisisommore/learn-go-grpc/calculator/calculatorpb"
 
 	"google.golang.org/grpc"
 )

@@ -1,10 +1,11 @@
-package server
+package calculator_server
 
 import (
-	pb "calculator/calculatorpb"
 	"io"
 	"log"
 	"net"
+
+	pb "github.com/thisisommore/learn-go-grpc/calculator/calculatorpb"
 
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"

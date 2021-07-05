@@ -1,4 +1,4 @@
-module sayname
+module github.com/thisisommore/learn-go-grpc/sayname
 
 go 1.16
 

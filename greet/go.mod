@@ -1,4 +1,4 @@
-module greet
+module github.com/thisisommore/learn-go-grpc/greet
 
 go 1.16
 
