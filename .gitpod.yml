@@ -1,3 +1,4 @@
 image:
   file: ./Dockerfile
 workspaceLocation: mygrpc.code-workspace
+checkoutLocation: .
